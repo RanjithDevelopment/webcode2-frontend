@@ -17,7 +17,8 @@ const [apidata,setapidata]=useState([]);
 
 useEffect(()=>{
 async function getapidata(){
-   const apiurl=`http://localhost:3001/amazon/get`;//https://webcode2node.herokuapp.com/amazon/get
+ //https://webcode2backend.herokuapp.com/amazon/get this is my actual live api which i was created but it works well in my local host but show appliction error in heroku 
+   const apiurl=`http://localhost:3001/amazon/get`;
 const response=await axios.get(apiurl);
 
 setapidata(response.data.data);
